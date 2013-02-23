@@ -1,0 +1,29 @@
+How to use?
+===========
+
+You can import ``fileupload`` from ``js.jquery_file_upload`` and ``need`` it
+where you want these resources to be included on a page::
+
+  >>> from js.jquery_file_upload import fileupload
+  >>> fileupload.need()
+
+For CORS::
+
+  >>> from js.jquery_file_upload import postmessage_transport
+  >>> postmessage_transport.need()
+
+and / or::
+
+  >>> from js.jquery_file_upload import xdr_transport
+  >>> xdr_transport.need()
+
+All of the above include only Javascript resources.  To also include the CSS
+resources you can::
+
+  >>> from js.jquery_file_upload import ui_noscript
+  >>> ui_noscript.need()
+
+and / or::
+
+  >>> from js.jquery_file_upload import ui
+  >>> ui.need()
